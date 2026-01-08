@@ -92,20 +92,6 @@
 
   
   <url>
-    <loc>https://blog.liiz.top/tags/Linux/</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.liiz.top/tags/Markdown/</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.liiz.top/tags/Hexo/</loc>
     <lastmod>2026-01-08</lastmod>
     <changefreq>weekly</changefreq>
@@ -120,7 +106,14 @@
   </url>
   
   <url>
-    <loc>https://blog.liiz.top/tags/GitHub/</loc>
+    <loc>https://blog.liiz.top/tags/Markdown/</loc>
+    <lastmod>2026-01-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.liiz.top/tags/Linux/</loc>
     <lastmod>2026-01-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -134,14 +127,7 @@
   </url>
   
   <url>
-    <loc>https://blog.liiz.top/tags/ThinkPHP/</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.liiz.top/tags/Tomcat/</loc>
+    <loc>https://blog.liiz.top/tags/GitHub/</loc>
     <lastmod>2026-01-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -156,6 +142,20 @@
   
   <url>
     <loc>https://blog.liiz.top/tags/Spring-MVC/</loc>
+    <lastmod>2026-01-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.liiz.top/tags/ThinkPHP/</loc>
+    <lastmod>2026-01-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.liiz.top/tags/Tomcat/</loc>
     <lastmod>2026-01-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

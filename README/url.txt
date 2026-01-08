@@ -1,0 +1,4 @@
+实测加载慢一些，没用
+avatar:https://cdn.jsdelivr.net/gh/chen-xing/figure_bed_02/cdn/20211025163900704.jpg
+
+left-col-background:https://cdn.jsdelivr.net/gh/chen-xing/figure_bed_02/cdn/20211025163940377.png

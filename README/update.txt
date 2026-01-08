@@ -1,0 +1,41 @@
+主页面
+body(316)
+左边侧边栏
+left-col
+{
+侧边栏菜单
+left-col #header .profilepic
+left-col #header .header-menu
+left-col #header .header-smart-menu
+#header .header-nav .social
+}
+文章区域右上角日期
+archive-article-date
+文章标题
+article-inner h1.article-title,.article-title
+文章右下角展开全文
+article-more-link a
+文章下方分割线
+article-info-index.article-info
+文章中超链接
+article-entry a
+文章下方页面跳转
+page-nav
+
+文章show_all_link及excerpt_link设置
+article.ejs中搜索即可
+
+待修改{
+功能 每日一句{
+yilia\layout\_partial\left-col.ejs(25-38);
+yilia\source\main.0cf68a.css(4139---);
+<!-- 页脚部分，不修改也可以 -->
+yilia\layout\_partial\footer.ejs(10-11);
+}
+功能 文章标题抖动{
+yilia\source\main.0cf68a.css(2144,.article-inner h1.article-title,.article-title){
+目前处理办法:transform-origin: 5%;<!-- 改变锚点 -->
+}
+}
+不知道为什么滚动条有三个
+}

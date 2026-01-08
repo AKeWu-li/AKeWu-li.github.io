@@ -103,7 +103,7 @@ theme: yilia
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
 - type: git
-  repo: https://github.com/Alucard-9/Alucard-9.github.io.git
+  repo: git@github.com:AKeWu-li/Alucard-9.github.io.git
   branch: main
 
 jsonContent:

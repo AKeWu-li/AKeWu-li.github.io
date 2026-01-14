@@ -142,7 +142,7 @@
   </url>
   
   <url>
-    <loc>https://blog.liiz.top/tags/Markdown/</loc>
+    <loc>https://blog.liiz.top/tags/Linux/</loc>
     <lastmod>2026-01-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -163,7 +163,14 @@
   </url>
   
   <url>
-    <loc>https://blog.liiz.top/tags/Linux/</loc>
+    <loc>https://blog.liiz.top/tags/Markdown/</loc>
+    <lastmod>2026-01-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.liiz.top/tags/ThinkPHP/</loc>
     <lastmod>2026-01-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -191,7 +198,7 @@
   </url>
   
   <url>
-    <loc>https://blog.liiz.top/tags/ThinkPHP/</loc>
+    <loc>https://blog.liiz.top/tags/SpringBoot/</loc>
     <lastmod>2026-01-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -199,13 +206,6 @@
   
   <url>
     <loc>https://blog.liiz.top/tags/Windows/</loc>
-    <lastmod>2026-01-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.liiz.top/tags/SpringBoot/</loc>
     <lastmod>2026-01-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

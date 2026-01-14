@@ -1,7 +1,29 @@
 ---
 title: linux命令
 date: 2022-04-22 08:46:45
+updated:
 tags: ["Linux"]
+categories: Base
+keywords:
+description:
+top_img:
+comments:
+cover:
+toc:
+toc_number:
+toc_style_simple:
+copyright:
+copyright_author:
+copyright_author_href:
+copyright_url:
+copyright_info:
+mathjax:
+katex:
+aplayer:
+highlight_shrink:
+aside:
+abcjs:
+noticeOutdate:
 ---
 
 [参考文章](https://blog.csdn.net/weixin_44191814/article/details/120091363?spm=1001.2101.3001.6650.4&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-4.pc_relevant_paycolumn_v3&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-4.pc_relevant_paycolumn_v3&utm_relevant_index=7)
@@ -14,7 +36,7 @@ tags: ["Linux"]
 
 ### 简单系统命令
 
-```language
+```bash
 1.查看ip地址
 ip a
 2.ping网络(测试网络连通)

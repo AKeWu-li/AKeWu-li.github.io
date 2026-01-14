@@ -1,7 +1,29 @@
 ---
 title: MyBlog
 date: 2021-08-19 17:34:24
+updated:
 tags: ['Hexo',"GitHub"]
+categories: Base
+keywords:
+description:
+top_img:
+comments:
+cover:
+toc:
+toc_number:
+toc_style_simple:
+copyright:
+copyright_author:
+copyright_author_href:
+copyright_url:
+copyright_info:
+mathjax:
+katex:
+aplayer:
+highlight_shrink:
+aside:
+abcjs:
+noticeOutdate:
 ---
 参考文章:[hexo+github](https://blog.csdn.net/wapchief/article/details/54602515?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162935875116780366584586%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=162935875116780366584586&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-2-54602515.first_rank_v2_pc_rank_v29&utm_term=hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99&spm=1018.2226.3001.4187).
 

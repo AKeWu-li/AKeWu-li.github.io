@@ -1,7 +1,29 @@
 ---
 title: SpringBoot+SpringMVC+Mybatis实现网上书城系统
 date: 2022-01-16 11:34:08
+updated:
 tags: ["Mybatis","SpringBoot","Spring MVC"]
+categories: Java
+keywords:
+description:
+top_img:
+comments:
+cover:
+toc:
+toc_number:
+toc_style_simple:
+copyright:
+copyright_author:
+copyright_author_href:
+copyright_url:
+copyright_info:
+mathjax:
+katex:
+aplayer:
+highlight_shrink:
+aside:
+abcjs:
+noticeOutdate:
 ---
 
 ## 开始

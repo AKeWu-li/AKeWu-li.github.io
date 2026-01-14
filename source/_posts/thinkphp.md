@@ -1,7 +1,29 @@
 ---
 title: ThinkPHP
 date: 2021-08-28 18:40:56
+updated:
 tags: ['ThinkPHP']
+categories: Java
+keywords:
+description:
+top_img:
+comments:
+cover:
+toc:
+toc_number:
+toc_style_simple:
+copyright:
+copyright_author:
+copyright_author_href:
+copyright_url:
+copyright_info:
+mathjax:
+katex:
+aplayer:
+highlight_shrink:
+aside:
+abcjs:
+noticeOutdate:
 ---
 [ThinkPHP6.0完全开发手册](https://www.kancloud.cn/manual/thinkphp6_0/1037479)
 [ThinkPHP6.0学习视频](https://www.bilibili.com/video/BV12E411y7u8)

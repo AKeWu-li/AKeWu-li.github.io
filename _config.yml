@@ -4,16 +4,17 @@
 
 # Site
 title: 啊可恶的博客
-subtitle: '个人博客'
+subtitle: 
 description: ''
 keywords:
-author: li
-language: en
+author: 啊可恶
+language: zh-CN
 timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://blog.liiz.top
+root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -28,7 +29,9 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render: _posts/hello-world.md
+skip_render: 
+  - _posts/hello-world.md
+  - 'live2d_models/**'
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -55,6 +58,11 @@ prismjs:
   preprocess: true
   line_number: true
   tab_replace: ''
+
+# 开启官方渲染器的图片路径自动修正功能
+marked:
+  prependRoot: true
+  postAsset: true
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -97,13 +105,13 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: yilia
+theme: butterfly
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
 - type: git
-  repo: git@github.com:AKeWu-li/Alucard-9.github.io.git
+  repo: git@github.com:AKeWu-li/AKeWu-li.github.io.git
   branch: main
 
 jsonContent:
@@ -124,28 +132,6 @@ jsonContent:
       excerpt: false
       categories: false
       tags: true
-
-live2d:
-  enable: true  # 是否启动
-  scriptFrom: local # 默认
-  pluginRootPath: live2dw/  # 插件在站点上的根目录(相对路径)
-  pluginJsPath: lib/  # 脚本文件相对与插件根目录路径
-  pluginModelPath: assets/  # 模型文件相对与插件根目录路径
-  tagMode: false  # 标签模式, 是否仅替换 live2d tag标签而非插入到所有页面中
-  debug: true  # 调试, 是否在控制台输出日志
-  model:
-    use: live2d-widget-model-koharu  ## 模型文件
-  display:
-    position: right # 定位方向 left right top bottom
-    width: 150  # 小人宽度
-    height: 300 #  小人高度
-    hOffset: 10  # 向 偏移
-    vOffset: -50  # 像 偏移
-  mobile:
-    show: true  # 手机端是否显示
-  react:
-    opacity: 0.7  # 模型透明度
-
 
 #sitemap
 baidusitemap:

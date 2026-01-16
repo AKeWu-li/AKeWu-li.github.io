@@ -13,7 +13,7 @@ nav:
   # Navigation bar logo image
   logo:
   display_title: true
-  display_post_title: false
+  display_post_title: true
   # Whether to fix navigation bar
   fixed: false
 
@@ -61,7 +61,7 @@ code_blocks:
 favicon: /img/favicon.png
 
 avatar:
-  # img: https://liiz-blog.oss-cn-shenzhen.aliyuncs.com/202404242331169.jpg
+  img: https://liiz-blog.oss-cn-shenzhen.aliyuncs.com/avatar.jpg
   effect: false
 
 # Disable all banner images
@@ -167,7 +167,7 @@ subtitle:
   # 1 - hitokoto.cn
   # 2 - https://api.aa1.cn/doc/yiyan.html
   # 3 - jinrishici.com
-  source: 3
+  source: false
   # If you close the typewriter effect, the subtitle will only show the first line of sub
   sub:
     - 此去泉台招旧部
@@ -279,16 +279,16 @@ footer:
 
 aside:
   enable: true
-  hide: false
+  hide: true
   # Show the button to hide the aside in bottom right button
   button: true
-  mobile: true
+  mobile: false
   # Position: left / right
   position: right
   display:
-    archive: true
-    tag: true
-    category: true
+    archive: false
+    tag: false
+    category: false
   card_author:
     enable: false
     description:
@@ -315,14 +315,14 @@ aside:
     storage: 10
     avatar: true
   card_categories:
-    enable: true
+    enable: false
     # If set 0 will show all
     limit: 8
     # Choose: none / true / false
     expand: none
     sort_order:
   card_tags:
-    enable: true
+    enable: false
     # If set 0 will show all
     limit: 40
     color: false
@@ -332,7 +332,7 @@ aside:
     order: 1
     sort_order:
   card_archives:
-    enable: true
+    enable: false
     # Type: monthly / yearly
     type: monthly
     # Eg: YYYY年MM月
@@ -343,7 +343,7 @@ aside:
     limit: 8
     sort_order:
   card_post_series:
-    enable: true
+    enable: false
     # The title shows the series name
     series_title: false
     # Order by title or date
@@ -351,9 +351,9 @@ aside:
     # Sort of order. 1, asc for ascending; -1, desc for descending
     order: -1
   card_webinfo:
-    enable: true
-    post_count: true
-    last_push_date: true
+    enable: false
+    post_count: false
+    last_push_date: false
     sort_order:
     # Time difference between publish date and now
     # Formal: Month/Day/Year Time or Year/Month/Day Time
@@ -445,9 +445,9 @@ wordcount:
 
 # Busuanzi count for PV / UV in site
 busuanzi:
-  site_uv: true
-  site_pv: true
-  page_pv: true
+  site_uv: false
+  site_pv: false
+  page_pv: false
 
 # --------------------------------------
 # Math
@@ -1062,9 +1062,20 @@ inject:
   head:
     - <link rel="stylesheet" href="https://unpkg.com/lxgw-wenkai-screen-webfont@latest/style.css">
     - <link rel="stylesheet" href="https://unpkg.com/@firacode/cdn@latest/fired_code.css">
+    - <link rel="stylesheet" href="/css/welcome.css">
+    - |
+      <style>
+        #footer {
+          background: transparent !important; /* 背景透明 */
+          background-attachment: scroll !important; 
+        }
+        #footer::before {
+          background: transparent !important; /* 去掉遮罩 */
+        }
+      </style>
   
   bottom:
-    - <script src="https://unpkg.com/oh-my-live2d@latest/dist/index.min.js"></script>
+    - <script src="https://liiz-blog.oss-cn-shenzhen.aliyuncs.com/js/live2d.min.js"></script>
     - |
       <script>
         // 设置一个定时器，等待 unpkg 的文件加载完毕
@@ -1079,7 +1090,7 @@ inject:
               menus: { disable: true },
               models: [
                 {
-                  path: '/live2d_models/yileina/LSS.model3.json',
+                  path: 'https://liiz-blog.oss-cn-shenzhen.aliyuncs.com/live2d_models/yileina/LSS.model3.json',
                   position: [0, 60],
                   scale: 0.4,
                   stageStyle: {

@@ -4,7 +4,7 @@
 
 # Site
 title: 啊可恶的博客
-subtitle: 
+subtitle:  
 description: ''
 keywords:
 author: 啊可恶
@@ -32,6 +32,7 @@ i18n_dir: :lang
 skip_render: 
   - _posts/hello-world.md
   - 'live2d_models/**'
+  - 'js/*.js'
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -111,7 +112,7 @@ theme: butterfly
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
 - type: git
-  repo: git@github.com:AKeWu-li/AKeWu-li.github.io.git
+  repo: https://github.com/AKeWu-li/AKeWu-li.github.io.git
   branch: main
 
 jsonContent:

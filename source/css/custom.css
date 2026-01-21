@@ -1,0 +1,88 @@
+/* source/css/custom.css */
+
+/* =========================================
+   1. 底部透明化样式
+   ========================================= */
+#footer {
+  background: transparent !important;
+  background-attachment: scroll !important;
+}
+#footer::before {
+  background: transparent !important;
+}
+
+/* =========================================
+   2. 修复时间轴图标样式 (黑色风格)
+   ========================================= */
+
+/* 文章列表的小图标 */
+.article-sort-item::before {
+  content: '\f35a' !important; /* 你改动的图标 */
+  font-family: 'Font Awesome 6 Free' !important;
+  font-weight: 900 !important;
+  background: transparent !important;
+  border: none !important;
+  
+  color: #000000 !important; /* 黑色 */
+  
+  font-size: 20px !important;
+  width: auto !important;
+  height: auto !important;
+  
+  /* 你调整过的位置 */
+  left: -40px !important; 
+  top: 2px !important;
+  
+  transition: all 0.3s ease-in-out;
+}
+
+/* "全部文章" / 年份标题的大图标 */
+.article-sort-title::before {
+  content: '\f358' !important; /* 你改动的图标 */
+  font-family: 'Font Awesome 6 Free' !important;
+  font-weight: 900 !important;
+  background: transparent !important;
+  border: none !important;
+  
+  color: #000000 !important; /* 黑色 */
+  
+  font-size: 24px !important;
+  width: auto !important;
+  height: auto !important;
+  
+  /* 你调整过的位置 */
+  left: -10px !important;
+  top: 20px !important;
+  
+  transition: all 0.3s ease-in-out;
+}
+
+/* 鼠标悬停时的动效 */
+.article-sort-item:hover::before,
+.article-sort-title:hover::before {
+  transform: rotate(360deg);
+  color: #00000f !important; /* 深蓝黑 */
+}
+
+/* =========================================
+   3. 复制代码提示框 (Snackbar) 美化
+   (既然分离文件，建议把这个也带上，防止样式丢失)
+   ========================================= */
+#snackbar {
+  background-color: #77b255 !important; /* 保持之前的绿色清新风，还是想改黑色？如果不喜欢可以删掉 */
+  font-family: 'LXGW WenKai Screen', sans-serif !important;
+  font-size: 16px !important;
+  color: #ffffff !important;
+  border-radius: 8px !important;
+  padding: 12px 20px !important;
+  bottom: 20px !important; 
+  left: 20px !important;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1) !important;
+}
+
+@media screen and (max-width: 768px) {
+  #snackbar {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+}

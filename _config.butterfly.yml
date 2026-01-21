@@ -22,7 +22,7 @@ menu:
   首页: / || fas fa-home
   归档: /archives/ || fas fa-archive
   标签: /tags/ || fas fa-tags
-  分类: /categories/ || fas fa-folder-open
+  # 分类: /categories/ || fas fa-folder-open
   # 关于: /about/ || fas fa-heart
   # 清单:
   #   音乐: /music/ || fas fa-music
@@ -68,13 +68,13 @@ avatar:
 disable_top_img: false
 
 # If the banner of page not setting, it will show the default_top_img
-default_top_img: https://liiz-blog.oss-cn-shenzhen.aliyuncs.com/background.jpg
+default_top_img: "linear-gradient(to top, #dfe9f3 0%, white 100%)"
 
 # The banner image of index page
 index_img: https://liiz-blog.oss-cn-shenzhen.aliyuncs.com/background.jpg
 
 # The banner image of archive page
-archive_img: https://liiz-blog.oss-cn-shenzhen.aliyuncs.com/background.jpg
+archive_img:
 
 # Note: tag page, not tags page
 tag_img:
@@ -1003,8 +1003,8 @@ snackbar:
   enable: true
   position: bottom-left
   # The background color of Toast Notification in light mode and dark mode
-  bg_light: '#49b1f5'
-  bg_dark: '#1f1f1f'
+  # bg_light: '#BDB76B'
+  # bg_dark: '#BDB76B'
 
 # Instant.page
 # https://instant.page/
@@ -1060,19 +1060,387 @@ css_prefix: true
 # Insert the code to head (before '</head>' tag) and the bottom (before '</body>' tag)
 inject:
   head:
-    - <link rel="stylesheet" href="https://unpkg.com/lxgw-wenkai-screen-webfont@latest/style.css">
+    # 1. 字体库
+    - <link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont@1.7.0/lxgwwenkaigbscreen.css">
     - <link rel="stylesheet" href="https://unpkg.com/@firacode/cdn@latest/fired_code.css">
     - <link rel="stylesheet" href="/css/welcome.css">
+
+    # 2. 样式部分 (整合版)
     - |
       <style>
-        #footer {
-          background: transparent !important; /* 背景透明 */
+        /* =========================================
+           1. 底部透明化
+           ========================================= */
+        #footer, #footer-wrap { 
+          background: transparent !important; 
           background-attachment: scroll !important; 
+          box-shadow: none !important;
         }
-        #footer::before {
-          background: transparent !important; /* 去掉遮罩 */
+        #footer::before, #footer-wrap::before { 
+          background: transparent !important; 
+          content: '' !important;
+        }
+
+        /* =========================================
+           2. 修复时间轴图标 (保持你之前的黑色设置)
+           ========================================= */
+        .article-sort-item::before {
+          content: '\f35a' !important;
+          font-family: 'Font Awesome 6 Free' !important;
+          font-weight: 900 !important;
+          background: transparent !important;
+          border: none !important;
+          color: #000000 !important;
+          font-size: 20px !important;
+          width: auto !important;
+          height: auto !important;
+          left: -40px !important; 
+          top: 2px !important;
+          transition: all 0.3s ease-in-out;
+        }
+
+        .article-sort-title::before {
+          content: '\f358' !important;
+          font-family: 'Font Awesome 6 Free' !important;
+          font-weight: 900 !important;
+          background: transparent !important;
+          border: none !important;
+          color: #000000 !important;
+          font-size: 24px !important;
+          width: auto !important;
+          height: auto !important;
+          left: -10px !important;
+          top: 20px !important;
+          transition: all 0.3s ease-in-out;
+        }
+
+        .article-sort-item:hover::before,
+        .article-sort-title:hover::before {
+          transform: rotate(360deg);
+          color: #00000f !important;
+        }
+
+        /* =========================================
+           3. Snackbar 美化
+           ========================================= */
+        /* 针对最外层容器 */
+        .snackbar-container {
+          /* 1. 颜值：浅绿背景 */
+          background: #dfe9f3 !important; 
+          background-color: #dfe9f3!important;
+          border-radius: 8px !important;
+          
+          /* 2. 布局：Flex 居中 */
+          display: flex !important;
+          justify-content: center !important;
+          align-items: center !important;
+          
+          /* 3. 位置控制：不再依赖 JS 的 bottom 变化 */
+          /* 强制固定在离底部 20px 的位置 */
+          bottom: 0px !important; 
+          left: 20px !important;
+          
+          /* 取消之前的位移，让它自然坐落 */
+          transform: none !important; 
+          
+          /* 4. 过渡动画：只让透明度慢慢变 */
+          transition: opacity 0.5s ease-in-out !important;
+          
+          /* 5. 尺寸 */
+          min-width: 180px !important;
+          border: none !important;
+        }
+
+        /* 🔥 核心逻辑：解决淡出问题 🔥 */
+        /* 当 JS 把 opacity 设为 0 时 (准备隐藏) */
+        .snackbar-container[style*="opacity: 0"] {
+          /* 1. 保持 opacity: 0，配合上面的 transition 实现淡出 */
+          opacity: 0 !important; 
+          
+          /* 2. 关键：不移动位置，让它原地淡出 */
+          /* 3. 关键：禁止鼠标交互，防止点到透明的框 */
+          pointer-events: none !important; 
+        }
+
+        /* 针对里面的文字 <p> */
+        .snackbar-container p {
+          font-family: 'LXGW WenKai Screen', sans-serif !important;
+          font-size: 20px !important; 
+          font-weight: bold !important;
+          color: #00C2B5 !important;
+          
+          margin: 0 !important;
+          padding: 6px 10px !important;
+          text-align: center !important;
+          line-height: 1.5 !important;
+        }
+
+        /* 图标部分：FontAwesome 对钩 */
+        .snackbar-container p::before {
+          content: '\f058'; 
+          font-family: 'Font Awesome 6 Free' !important;
+          font-weight: 900 !important;
+          margin-right: 8px !important;
+          font-size: 22px !important; 
+        }
+        
+        /* 手机适配 */
+        @media screen and (max-width: 768px) {
+          .snackbar-container {
+            left: 50% !important;
+            transform: translateX(-50%) !important; /* 只做水平居中 */
+          }
+        }
+        /* ==================================================
+           4. 透明顶部栏配置 (精准避开首页版)
+           ================================================== */
+        
+        /* 针对所有“非全屏”的顶部栏 (也就是内页) */
+        /* 首页有 .full_page 类，所以这行代码绝不会碰到首页 */
+        #page-header:not(.full_page) {
+          background: transparent !important;
+          background-image: none !important;
+          height: 300px !important; /* 内页高度 */
+          box-shadow: none !important;
+          border: none !important;
+          margin-bottom: 0 !important;
+        }
+
+        /* 去掉内页遮罩 */
+        #page-header:not(.full_page)::before {
+          background: transparent !important;
+          box-shadow: none !important;
+        }
+
+        /* 5. 内页文字颜色修正 (深灰色) */
+        /* 同样使用 :not(.full_page) 确保不改首页白字 */
+        
+        /* 站点标题 */
+        #page-header:not(.full_page) #site-title,
+        #page-header:not(.full_page) #site-subtitle,
+        #page-header:not(.full_page) .post-meta,
+        #page-header:not(.full_page) .page-title {
+          color: #4c4948 !important;
+          text-shadow: none !important;
+        }
+        
+        /* =========================================
+           6. 导航栏 (精准修复)
+           ========================================= */
+        
+        /* 仅在非首页时，强制导航栏置顶且文字变黑 */
+        
+        /* 导航栏容器 */
+        #page-header:not(.full_page) #nav {
+          z-index: 9999 !important;
+          background: transparent !important;
+          box-shadow: none !important;
+        }
+        
+        /* 博客名 (左上角) */
+        #page-header:not(.full_page) #nav #blog_name a,
+        #page-header:not(.full_page) #nav #site-name {
+          color: #333333 !important;
+          text-shadow: none !important;
+          font-weight: bold !important;
+        }
+
+        /* 菜单链接 (右上角) */
+        #page-header:not(.full_page) #nav .menus_item a {
+          color: #333333 !important;
+          text-shadow: none !important;
+          font-weight: bold !important;
+        }
+        
+        /* 搜索按钮 */
+        #page-header:not(.full_page) #nav #search-button {
+          color: #333333 !important;
+        }
+        
+        /* 手机端汉堡菜单 */
+        #page-header:not(.full_page) #nav .toggle-menu {
+          color: #333333 !important;
+        }
+        
+        /* 悬停颜色 */
+        #page-header:not(.full_page) #nav .menus_item a:hover {
+          color: #00C2B5 !important; 
+        }
+        /* ============================================================
+           8. 终极色彩强制修复 (核弹版) - 专治颜色不生效
+           ============================================================ */
+
+        /* ------------------------------------------------------------
+           场景 A: 首页 (Home) -> 背景是深色图 -> 文字必须是【白色】
+           ------------------------------------------------------------ */
+        /* 1. 博客标题 (左上角) */
+        body.home #nav #blog_name .site-name,
+        body.home #nav #site-name {
+          color: #ffffff !important;
+          text-shadow: 2px 2px 4px rgba(0,0,0,0.6) !important; /* 加重阴影，防背景撞色 */
+        }
+        
+        /* 2. 菜单链接 (右上角) */
+        body.home #nav .menus_item .site-page,
+        body.home #nav .menus_item i {
+          color: #ffffff !important;
+          text-shadow: 1px 1px 2px rgba(0,0,0,0.5) !important;
+        }
+
+        /* 3. 搜索按钮 */
+        body.home #nav #search-button {
+           color: #ffffff !important;
+           text-shadow: 1px 1px 2px rgba(0,0,0,0.5) !important;
+        }
+
+        /* ------------------------------------------------------------
+           场景 B: 内页 (Not Home) -> 背景是透明/浅色 -> 文字必须是【深黑】
+           ------------------------------------------------------------ */
+        /* 1. 博客标题 (左上角) */
+        body:not(.home) #nav #blog_name .site-name,
+        body:not(.home) #nav #site-name {
+          color: #333333 !important; /* 纯黑 */
+          text-shadow: none !important; /* 去掉阴影 */
+          font-weight: 900 !important; /* 加粗 */
+        }
+
+        /* 2. 菜单链接 (右上角) */
+        body:not(.home) #nav .menus_item .site-page,
+        body:not(.home) #nav .menus_item i {
+          color: #333333 !important;
+          text-shadow: none !important;
+          font-weight: bold !important;
+        }
+
+        /* 3. 搜索按钮 */
+        body:not(.home) #nav #search-button {
+          color: #333333 !important;
+        }
+        
+        /* 4. 归档页/标签页的大标题 (如“归档”) */
+        body:not(.home) #page-header .page-title {
+          color: #333333 !important;
+          text-shadow: none !important;
+        }
+
+        /* 5. 文章具体页面：标题和元数据 */
+        body:not(.home) #post-info .post-title {
+          color: #000000 !important; /* 标题用纯黑 */
+          text-shadow: none !important;
+          font-weight: bold !important;
+        }
+        
+        body:not(.home) #post-info #post-meta,
+        body:not(.home) #post-info .post-meta-separator,
+        body:not(.home) #post-info i {
+          color: #555555 !important; /* 信息用深灰 */
+          text-shadow: none !important;
+        }
+        
+        /* 6. 鼠标悬停高亮 (统一用你的青绿色) */
+        #nav .site-page:hover, 
+        #nav #search-button:hover,
+        #nav .site-name:hover {
+          color: #00C2B5 !important;
+        }
+        /* =========================================
+           9. 修复标签/分类/归档页居中 (保护文章侧边栏版)
+           ========================================= */
+        
+        /* 核心逻辑：只有当页面 ID 是 #page 时，才执行去侧边栏和居中操作 */
+        /* 文章页的 ID 是 #post，所以这下面的代码对文章页完全无效！ */
+
+        /* 1. 隐藏侧边栏 (仅针对标签/归档页) */
+        /* 使用兄弟选择器(~)：只有当侧边栏前面是 #page 时，才把它藏起来 */
+        #page ~ #aside-content {
+          display: none !important;
+        }
+
+        /* 2. 强制内容卡片居中 (仅针对标签/归档页) */
+        .layout #page {
+          /* 取消浮动，防止贴左 */
+          float: none !important;
+          
+          /* 上下0，左右自动 = 居中 */
+          margin: 0 auto !important;
+          
+          /* 稍微限制一下宽度，让它在屏幕中间更好看 */
+          width: 90% !important; 
+          max-width: 1200px !important; 
+          
+          /* 确保背景色和圆角 */
+          padding: 40px !important;
+        }
+        /* =========================================
+           10. 隐藏左上角标题 + 修复菜单位置
+           ========================================= */
+        
+        /* 1. 隐藏博客标题 */
+        #nav #blog-info {
+          display: none !important;
+        }
+
+        /* 2. 🔥 核心修复：强制导航栏内容靠右对齐 🔥 */
+        #nav {
+          justify-content: flex-end !important;
+        }
+        /* =========================================
+           11. 修改文章底部跳转卡片颜色 (终极毁灭版)
+           ========================================= */
+        
+        /* 1. 强制设定背景色 */
+        #pagination.pagination-post .cover {
+          background: linear-gradient(to top, #dfe9f3 0%, #dfe9f3 100%) !important;
+          opacity: 1 !important; /* 确保背景本身是不透明的 */
+        }
+
+        /* 2. ☢️ 地毯式清除所有可能的遮罩层 ☢️ */
+        /* 只要是这下面的伪元素，统统隐藏！ */
+        #pagination.pagination-post .cover::before,
+        #pagination.pagination-post .cover::after,
+        #pagination.pagination-post .prev-post > a::before,
+        #pagination.pagination-post .next-post > a::before,
+        #pagination.pagination-post .prev-post > a::after,
+        #pagination.pagination-post .next-post > a::after {
+          background: transparent !important;
+          background-image: none !important;
+          display: none !important; /* 直接不渲染，最彻底 */
+          opacity: 0 !important;
+          content: none !important; /* 取消内容 */
+        }
+
+        /* =========================================
+           3. 文字颜色修改 (针对 info-item-1/2 结构)
+           ========================================= */
+        
+        /* 选中“上一篇/下一篇”和“文章标题” */
+        #pagination.pagination-post .info-item-1,
+        #pagination.pagination-post .info-item-2 {
+          /* 1. 字体颜色 */
+          color: #00C2B5 !important; 
+          
+          /* 2. 必须去掉阴影，否则黑字配黑影会糊 */
+          text-shadow: none !important; 
+          
+          /* 3. 加粗 */
+          font-weight: bold !important;
+        }
+
+        /* =========================================
+           4. 鼠标悬停变色
+           ========================================= */
+        /* 鼠标放上去时，文字变成主题色 */
+        #pagination.pagination-post:hover .info-item-1,
+        #pagination.pagination-post:hover .info-item-2 {
+          color: #000000 !important;
         }
       </style>
+
+    # 3. 引入 Typed.js
+    - <script src="https://npm.elemecdn.com/typed.js@2.0.12/lib/typed.min.js"></script>
+
+    # 4. 引入自定义 JS
+    - <script src="/js/custom.js"></script>
   
   bottom:
     - <script src="https://liiz-blog.oss-cn-shenzhen.aliyuncs.com/js/live2d.min.js"></script>
@@ -1091,10 +1459,10 @@ inject:
               models: [
                 {
                   path: 'https://liiz-blog.oss-cn-shenzhen.aliyuncs.com/live2d_models/yileina/LSS.model3.json',
-                  position: [0, 60],
+                  position: [0, 150],
                   scale: 0.4,
                   stageStyle: {
-                    height: 450
+                    height: 500
                   }
                 }
               ]

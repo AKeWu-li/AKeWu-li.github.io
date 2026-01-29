@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.liiz.top/2026/01/29/GaussianUpdate/</loc>
+    
+    <lastmod>2026-01-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.liiz.top/2026/01/29/SplaTAM/</loc>
+    
+    <lastmod>2026-01-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.liiz.top/2026/01/29/SpatiaLLM/</loc>
+    
+    <lastmod>2026-01-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.liiz.top/2026/01/14/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E6%95%99%E7%A8%8B/</loc>
     
     <lastmod>2026-01-20</lastmod>
@@ -121,92 +148,106 @@
 
   <url>
     <loc>https://blog.liiz.top/</loc>
-    <lastmod>2026-01-21</lastmod>
+    <lastmod>2026-01-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://blog.liiz.top/tags/Hexo/</loc>
-    <lastmod>2026-01-21</lastmod>
+    <loc>https://blog.liiz.top/tags/3DGS/</loc>
+    <lastmod>2026-01-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.liiz.top/tags/yilia/</loc>
-    <lastmod>2026-01-21</lastmod>
+    <loc>https://blog.liiz.top/tags/LLM/</loc>
+    <lastmod>2026-01-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.liiz.top/tags/Linux/</loc>
-    <lastmod>2026-01-21</lastmod>
+    <lastmod>2026-01-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.liiz.top/tags/Markdown/</loc>
-    <lastmod>2026-01-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.liiz.top/tags/GitHub/</loc>
-    <lastmod>2026-01-21</lastmod>
+    <lastmod>2026-01-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.liiz.top/tags/Mybatis/</loc>
-    <lastmod>2026-01-21</lastmod>
+    <lastmod>2026-01-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.liiz.top/tags/SpringBoot/</loc>
-    <lastmod>2026-01-21</lastmod>
+    <loc>https://blog.liiz.top/tags/Hexo/</loc>
+    <lastmod>2026-01-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.liiz.top/tags/Spring-MVC/</loc>
-    <lastmod>2026-01-21</lastmod>
+    <loc>https://blog.liiz.top/tags/GitHub/</loc>
+    <lastmod>2026-01-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.liiz.top/tags/ThinkPHP/</loc>
-    <lastmod>2026-01-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.liiz.top/tags/Tomcat/</loc>
-    <lastmod>2026-01-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.liiz.top/tags/Windows/</loc>
-    <lastmod>2026-01-21</lastmod>
+    <loc>https://blog.liiz.top/tags/yilia/</loc>
+    <lastmod>2026-01-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.liiz.top/tags/Spring/</loc>
-    <lastmod>2026-01-21</lastmod>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.liiz.top/tags/Spring-MVC/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.liiz.top/tags/ThinkPHP/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.liiz.top/tags/Tomcat/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.liiz.top/tags/Windows/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.liiz.top/tags/SpringBoot/</loc>
+    <lastmod>2026-01-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -214,15 +255,22 @@
 
   
   <url>
+    <loc>https://blog.liiz.top/categories/3D-Reconstruction/</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.liiz.top/categories/Base/</loc>
-    <lastmod>2026-01-21</lastmod>
+    <lastmod>2026-01-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.liiz.top/categories/Java/</loc>
-    <lastmod>2026-01-21</lastmod>
+    <lastmod>2026-01-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
